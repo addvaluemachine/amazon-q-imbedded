@@ -104,14 +104,34 @@ body {
     }
 }
 
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f4b805; /* Chat icon background color */
+    color: #fff; /* Chat icon text color */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1100; /* Ensure it's above the iframe */
+    font-size: 24px;
+}
+
+/* Chat container */
 .chat-container {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom of the page */
-    right: 20px; /* Distance from the right of the page */
+    bottom: 20px;
+    right: 20px;
     z-index: 1000; /* Ensures it appears above other content */
-    width: 350px; /* Adjust width as needed */
-    height: 500px; /* Adjust height as needed */
+    width: 500px; /* Updated width */
+    height: 600px; /* Updated height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    display: none; /* Initially hidden */
 }
 
 .chat-iframe {
@@ -121,4 +141,3 @@ body {
     border-radius: 10px; /* Rounded corners for a modern look */
     overflow: hidden;
 }
-

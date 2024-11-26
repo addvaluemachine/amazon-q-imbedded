@@ -8,6 +8,17 @@
     <title>Any Company</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+    <script>
+        function toggleChat() {
+            const chatContainer = document.getElementById('chat-container');
+            if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+                chatContainer.style.display = 'block'; // Show the chat container
+            } else {
+                chatContainer.style.display = 'none'; // Hide the chat container
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -33,7 +44,11 @@
     </main>
 
     <!-- Chat Widget -->
-    <div class="chat-container">
+    <div class="chat-icon" onclick="toggleChat()">
+        💬
+    </div>
+    
+    <div class="chat-container" id="chat-container">
         <iframe 
             src="https://elxhjffg.chat.qbusiness.us-east-1.on.aws/" 
             title="Chat Widget" 
@@ -41,5 +56,6 @@
             class="chat-iframe">
         </iframe>
     </div>
+    
 </body>
 </html>

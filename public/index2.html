@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function toggleChat() {
+            const chatContainer = document.getElementById('chat-container');
+            if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+                chatContainer.style.display = 'block'; // Show the chat container
+            } else {
+                chatContainer.style.display = 'none'; // Hide the chat container
+            }
+        }
+    </script>
+    <title>Insurance Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #00457C;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .plans {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .plan {
+            flex: 1;
+            min-width: 250px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .plan h3 {
+            margin-top: 0;
+        }
+        .plan p {
+            font-size: 1rem;
+            color: #666;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Chat Widget Styles */
+        .chat-widget-container {
+            position: fixed;
+            bottom: 30px; /* Adjusts distance from the bottom */
+            right: 30px; /* Adjusts distance from the right */
+            z-index: 1000;
+        }
+        .chat-icon {
+            background-color: #E8C94E;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #00457C;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chat-container {
+            width: 500px; /* Updated width */
+            height: 600px; /* Updated height */
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chat-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="font-size: 1.8rem; font-weight: bold;">
+                <a href="index.html" style="text-decoration: none; color: white;">
+                    <span class="logo-text">Any<span class="highlight" style="color: #FFC107;">Company</span></span>
+                </a>
+            </div>
+            <h1>Comprehensive Insurance Solutions</h1>
+            <nav class="menu" style="font-size: 1rem;">
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
+                    <li><a href="index.html" style="text-decoration: none; color: #FFC107;">Home</a></li>
+                    <li><a href="about.html" style="text-decoration: none; color: #FFC107;">About</a></li>
+                    <li><a href="contact.html" style="text-decoration: none; color: #FFC107;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="hero">
+            <h1>Tailored Coverage for Your Needs</h1>
+            <p>Discover the perfect insurance plan for you, your family, or your business.</p>
+        </div>
+
+        <section class="plans">
+            <div class="plan">
+                <h3>Health Insurance</h3>
+                <p>Ensure your family’s well-being with comprehensive health coverage.</p>
+            </div>
+            <div class="plan">
+                <h3>Auto Insurance</h3>
+                <p>Drive with peace of mind, knowing you’re covered for every journey.</p>
+            </div>
+            <div class="plan">
+                <h3>Home Insurance</h3>
+                <p>Protect your home and everything in it with reliable coverage.</p>
+            </div>
+        </section>
+
+        <section class="testimonials" style="margin-top: 40px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">What Our Customers Say</h2>
+            <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center;">
+                <p>
+                    "I’ve never felt more secure with my insurance provider. Their team was professional, and their plans are tailored to my needs." 
+                    <br><strong>- Alex T.</strong>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chat Widget positioned at bottom-right -->
+    <div class="chat-widget-container">
+        <div class="chat-icon" onclick="toggleChat()">💬</div>
+        <div class="chat-container" id="chat-container">
+            <iframe 
+                src="https://elxhjffg.chat.qbusiness.us-east-1.on.aws/" 
+                title="Chat Widget" 
+                frameborder="0"
+                class="chat-iframe">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 AnyCompany Insurance. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
